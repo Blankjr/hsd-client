@@ -67,19 +67,33 @@ const KlausurplanItem: FC<KlausurplanItemProps> = ({
       </div>
     )
   }
+  const renderDaysLeft = () => {
+    if (daysLeft !== 'NaN')
+      return (
+        <div className="col-10 d-flex justify-content-end mx-2">
+          in{' '}
+          <span className="highlight-color text-truncate">
+            &nbsp;{daysLeft}&nbsp;
+          </span>{' '}
+          Tagen
+        </div>
+      )
+    else
+      return (
+        <div className="col-10 d-flex justify-content-end mx-2">
+          <span className="highlight-color text-truncate">
+            schon vorbei
+          </span>
+        </div>
+      )
+  }
   const renderDateExam = () => {
     if (date !== 'T.n.V.')
       return (
         <div className="row my-3">
           <div className="col-5 text-truncate">am {date}</div>
           <div className="col-7 d-flex justify-content-end">
-            <div className="col-10 d-flex justify-content-end mx-2">
-              in{' '}
-              <span className="highlight-color text-truncate">
-                &nbsp;{daysLeft}&nbsp;
-              </span>{' '}
-              Tagen
-            </div>
+            {renderDaysLeft()}
             {renderBookmarkButton()}
           </div>
         </div>
