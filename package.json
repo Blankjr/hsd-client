@@ -53,7 +53,6 @@
     "lint:fix": "eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
     "style:check": "prettier --check --ignore-unknown .",
     "format": "prettier --write --ignore-unknown .",
-    "prepare": "cd .. && husky install client/.husky",
     "precommit": "lint-staged",
     "test": "react-scripts test",
     "test:ci": "react-scripts test --ci --reporters=default --reporters=jest-junit --coverage",
