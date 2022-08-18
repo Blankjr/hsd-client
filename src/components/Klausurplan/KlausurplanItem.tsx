@@ -78,14 +78,6 @@ const KlausurplanItem: FC<KlausurplanItemProps> = ({
           Tagen
         </div>
       )
-    else
-      return (
-        <div className="col-10 d-flex justify-content-end mx-2">
-          <span className="highlight-color text-truncate">
-            schon vorbei
-          </span>
-        </div>
-      )
   }
   const renderDateExam = () => {
     if (date !== 'T.n.V.')
