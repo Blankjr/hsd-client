@@ -136,12 +136,6 @@ const Sidebar: FC<SidebarProps> = ({
           University of Applied Sciences
         </div>
         <div className={isOpen ? 'opening a8 col-12' : 'col-12'}>HSD</div>
-        <div className={isOpen ? 'opening a8 col-12' : 'col-12'}>
-          Bugs? Feedback?
-        </div>
-        <div className={isOpen ? 'opening a8 col-12' : 'col-12'}>
-          <i className="bi bi-envelope"></i> Kontakt
-        </div>
       </div>
     </Menu>
   )
